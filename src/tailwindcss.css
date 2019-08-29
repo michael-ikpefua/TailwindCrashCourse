@@ -10,23 +10,25 @@ it won't be overriden.  */
 .btn {
   @apply inline-block px-5 py-3 rounded-lg text-sm uppercase tracking-wider  font-semibold;
 }
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
 .btn-indigo {
   @apply bg-indigo-500 text-white;
 }
 /* Note. 
-Tailwind doesnt support appy for hover and responsive screen */
-/* hover:bg-indigo-400  sm:text-base shodow-lg*/
-btn-indigo:hover {
+Tailwind doesnt support appy for hover and responsive screen  by default.*/
+.btn-indigo:hover {
   @apply bg-indigo-300;
 }
-
+.btn-indigo:active {
+  @apply bg-indigo-800;
+}
 .btn-gray {
   @apply bg-gray-400 text-gray-800;
 }
-/* Note. 
-Tailwind doesnt support appy for hover and responsive screen */
-/* hover:bg-indigo-400  sm:text-base shodow-lg*/
-btn-gray:hover {
+
+.btn-gray:hover {
   @apply bg-gray-300;
 }
 
