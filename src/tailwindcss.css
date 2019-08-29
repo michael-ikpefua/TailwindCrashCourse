@@ -7,5 +7,41 @@ button class has padding 4 here
 in my html page, i can override the padding from 4 to 8.
 However if I don;t write my class inbetween component and utilities
 it won't be overriden.  */
+.btn {
+  @apply inline-block px-5 py-3 rounded-lg text-sm uppercase tracking-wider  font-semibold;
+}
+.btn-indigo {
+  @apply bg-indigo-500 text-white;
+}
+/* Note. 
+Tailwind doesnt support appy for hover and responsive screen */
+/* hover:bg-indigo-400  sm:text-base shodow-lg*/
+btn-indigo:hover {
+  @apply bg-indigo-300;
+}
 
+.btn-gray {
+  @apply bg-gray-400 text-gray-800;
+}
+/* Note. 
+Tailwind doesnt support appy for hover and responsive screen */
+/* hover:bg-indigo-400  sm:text-base shodow-lg*/
+btn-gray:hover {
+  @apply bg-gray-300;
+}
+
+/* 
+@screen sm {
+  .btn {
+    @apply text-base;
+  }
+}
+
+instead of using media query to target small screen I an use the above code.
+@media (min-width: 640px) {
+  .btn {
+    @apply text-base;
+  }
+}
+*/
 @tailwind utilities;

@@ -605,6 +605,70 @@ video {
 
 @tailwind component;
 
+/* Extract your class in between component and utilities class,
+because it enables me to override any class that is written inbetween
+them. ***FOR EXAMPLE***
+button class has padding 4 here
+in my html page, i can override the padding from 4 to 8.
+However if I don;t write my class inbetween component and utilities
+it won't be overriden.  */
+
+.btn {
+  display: inline-block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.btn-indigo {
+  background-color: #667eea;
+  color: #fff;
+}
+
+/* Note. 
+Tailwind doesnt support appy for hover and responsive screen */
+
+/* hover:bg-indigo-400  sm:text-base shodow-lg*/
+
+btn-indigo:hover {
+  background-color: #a3bffa;
+}
+
+.btn-gray {
+  background-color: #cbd5e0;
+  color: #2d3748;
+}
+
+/* Note. 
+Tailwind doesnt support appy for hover and responsive screen */
+
+/* hover:bg-indigo-400  sm:text-base shodow-lg*/
+
+btn-gray:hover {
+  background-color: #e2e8f0;
+}
+
+/* 
+@screen sm {
+  .btn {
+    @apply text-base;
+  }
+}
+
+instead of using media query to target small screen I an use the above code.
+@media (min-width: 640px) {
+  .btn {
+    @apply text-base;
+  }
+}
+*/
+
 .sr-only {
   position: absolute;
   width: 1px;
