@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="build/tailwind.css">
-</head>
-<body class="bg-gray-100">
-    <div class="px-8 py-10">
-        <img class="h-10 " src="/public/images/logo.jpg" alt="">
-        <img class="mt-6 rounded-lg shadow-xl " src="/public/images/woman.svg" alt="Woman WOrking SOmewhere SVG Image">
-        <h1 class="mt-6 text-2xl font-bold text-gray-600 leading-tight">You can work from anywhere. <span class="text-indigo-600">Take advantage of it.</span></h1>
-        <p class="mt-2 text-gray-600">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam rem porro molestiae unde sit, qui error officiis rerum non fugiat nemo quaerat delectus praesentium soluta libero, architecto in, accusantium magni?
-        </p>
-        <div class="mt-4">
-            <a class="px-5 py-3 shodow-lg hover:bg-indigo-400 text-sm font-semibold uppercase tracking-wider rounded-lg inline-block bg-indigo-600 text-white" href="">Book your escape</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WorkStation</title>
+    <link rel="stylesheet" href="build/tailwind.css" />
+  </head>
+  <body class="bg-gray-400">
+    <!-- This would be flex for two column in larger device. -->
+    <div class="bg-gray-100 flex">
+      <div
+        class="px-8 py-10 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12"
+      >
+        <div class="xl:max-w-lg xl:ml-auto">
+          <img class="h-10 " src="/public/images/logo.jpg" alt="" />
+          <img
+            class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-56 sm:w-full sm:object-cover sm:object-center lg:hidden"
+            src="/public/images/woman.svg"
+            alt="Woman WOrking SOmewhere SVG Image"
+          />
+          <h1
+            class="mt-6 text-2xl font-bold text-gray-600 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
+          >
+            You can work from anywhere.
+            <br class="hidden lg:inline-block" />
+            <span class="text-indigo-600">Take advantage of it.</span>
+          </h1>
+          <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+            rem porro molestiae unde sit, qui error officiis rerum non fugiat
+            nemo quaerat delectus praesentium soluta libero, architecto in,
+            accusantium magni?
+          </p>
+          <div class="mt-4 sm:mt-6">
+            <a class="" href="">Book your escape</a>
+          </div>
         </div>
+      </div>
+      <!-- This would be for larger screen -->
+      <div class="hidden lg:block lg:w-1/2 lg:relative">
+        <img
+          class="absolute inset-0 w-full h-full object-cover object-fill object-center"
+          src="/public/images/woman.svg"
+          alt="Woman WOrking SOmewhere SVG Image"
+        />
+      </div>
     </div>
-</body>
+  </body>
 </html>

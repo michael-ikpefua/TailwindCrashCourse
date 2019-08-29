@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind component;
+/* Extract your class in between component and utilities class,
+because it enables me to override any class that is written inbetween
+them. ***FOR EXAMPLE***
+button class has padding 4 here
+in my html page, i can override the padding from 4 to 8.
+However if I don;t write my class inbetween component and utilities
+it won't be overriden.  */
+
 @tailwind utilities;
